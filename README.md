@@ -30,5 +30,3 @@ The project includes smooth animations, an interactive side navigation menu, and
 | Custom Loader Animation | Smooth UX loading screen |
 
 
-## Project Structure
-
