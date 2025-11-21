@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YUMMY</title>
+    <!-- FAVICON -->
+    <link rel="shortcut icon" href="./imgs/logo.png" type="image/x-icon">
+    <!-- FONTAWESOME -->
+    <link rel="stylesheet" href="./css/all.min.css">
+    <!-- BOOTSTRAP -->
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <!-- MAIN CSS -->
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body class="bg-black">
+
+
+
+    <!-- Loading Screen -->
+    <div class="loading-screen">
+        <div class="inner-loading-screen d-flex justify-content-center align-items-center">
+            <span class="loader"></span>
+        </div>
+    </div>
+    <!-- SIDE NAV -->
+    <div class="side-nav-menu position-fixed d-flex top-0">
+        <!-- MAIN NAV BODY -->
+        <div class="nav-tab d-flex bg-black flex-column justify-content-between min-vh-100 p-4">
+            <div class="links">
+                <ul class="list-unstyled overflow-hidden text-white">
+                    <li data-action="search" class="py-2 position-relative cursor-pointer">Search</li>
+                    <li data-action="categories" class="py-2 position-relative cursor-pointer">Categories</li>
+                    <li data-action="area" class="py-2 position-relative cursor-pointer">Area</li>
+                    <li data-action="ingredients" class="py-2 position-relative cursor-pointer">Ingredients</li>
+                    <li data-action="contact" class="py-2 position-relative cursor-pointer">Contact Us</li>
+                </ul>
+            </div>
+            <div class="nav-footer text-white">
+                <div class="icons mb-2">
+                    <i class="fa-brands fa-facebook me-2"></i>
+                    <i class="fa-brands fa-twitter me-2"></i>
+                    <i class="fa-solid fa-globe"></i>
+                </div>
+                <div class="footer small">
+                    <p class="mb-0">Copyright © @moffahmii<br>All Rights Reserved.</p>
+                </div>
+            </div>
+        </div>
+        <!-- HEADER THAT ALWAYS SHOWS -->
+        <div class="nav-header d-flex flex-column justify-content-between py-4 text-center px-2 bg-white text-black">
+            <img class="logo" src="imgs/logo.png" alt="">
+            <i class="fa-solid open-close-icon fa-2x fa-align-justify"></i>
+            <div>
+                <i class="fa-solid fa-globe d-block"></i>
+                <i class="fa-solid fa-share-nodes"></i>
+            </div>
+        </div>
+    </div>
+    <!-- Main Content -->
+    <div class="container mt-4">
+        <div id="searchContainer"></div>
+        <div id="rowData" class="row py-4 g-3"></div>
+    </div>
+
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+
+</html>
