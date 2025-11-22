@@ -31,8 +31,17 @@ openCloseIcon.addEventListener("click", () => {
 });
 
 // ======= Utility Functions =======
-function showLoading() { innerLoadingScreen.style.display = "flex"; }
-function hideLoading() { innerLoadingScreen.style.display = "none"; }
+function showLoading() {
+    loadingScreen.style.display = "flex";
+    innerLoadingScreen.style.display = "flex";
+}
+
+function hideLoading() {
+    setTimeout(() => {
+        loadingScreen.style.display = "none";
+    }, 400); 
+}
+
 
 async function fetchAPI(url) {
     showLoading();
@@ -48,7 +57,7 @@ function createMealsHTML(arr) {
         <div class="col-md-3">
             <div class="meal" data-id="${meal.idMeal}">
                 <img class="w-100" src="${meal.strMealThumb}" alt="">
-                <div class="meal-layer"><h3 class="fw-bold ">${meal.strMeal}</h3></div>
+                <div class="meal-layer"><h3 class="fw-bold fs">${meal.strMeal}</h3></div>
             </div>
         </div>
     `).join('');
@@ -202,8 +211,8 @@ links.forEach(li => {
 // ======= Initial Load =======
 document.addEventListener("DOMContentLoaded", () => {
     searchByName("");
-    if (loadingScreen) loadingScreen.style.display = "none";
 });
+hideLoading();
 
 // ======= Contact Form =======
 function showContacts() {
